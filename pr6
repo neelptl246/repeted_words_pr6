@@ -1,0 +1,13 @@
+import collections;
+
+N = int(input())  # number of words
+d = collections.OrderedDict() # ordered dictionary
+for i in range(N):  
+    word = input()  # get word
+    if word in d:    # if the word is already in the dictionary
+        d[word] +=1   # increment 
+    else:
+        d[word] = 1  # add the word to the dictionary
+print(len(d));        
+for k,v in d.items():
+    print(v,end = " ");   
